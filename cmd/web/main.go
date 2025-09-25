@@ -30,6 +30,7 @@ func main() {
 
 	// Register HTTP handlers
 	http.NewUserHandler(router, userUC)
+	http.NewEdgeHandler(router)
 
 	addr := fmt.Sprintf(":%d", cfg.AppPort)
 	log.Printf("server running on %s", addr)
