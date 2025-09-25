@@ -9,8 +9,10 @@ import (
 
 type EdgeHandler struct{}
 type EdgeData struct {
-	Key   string `json:"key"`
-	Count int    `json:"count"`
+	CameraID   string  `json:"camera_id"`
+	Timestamp  string  `json:"timestamp"`
+	FPS        float32 `json:"fps"`
+	FrameCount int     `json:"frame_count"`
 }
 
 func NewEdgeHandler(router *gin.Engine) {
